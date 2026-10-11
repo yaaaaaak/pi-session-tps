@@ -1,0 +1,36 @@
+# 依赖与可重新生成的产物；package-lock.json 保留在版本控制中
+node_modules/
+/dist/
+/build/
+/coverage/
+/.nyc_output/
+*.tsbuildinfo
+*.tgz
+
+# 内部规格、历史交接、验证日志与本地临时资料（不作为公开交付）
+/SPEC.md
+/handoff/
+/subagent-artifacts/
+/sessions/
+/session-exports/
+/*.jsonl
+/.pi/
+/tmp/
+/temp/
+*.log
+*.tmp
+
+# 本地配置与凭据
+.env
+.env.*
+!.env.example
+/.vscode/
+/.idea/
+
+# 操作系统与编辑器临时文件
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.swp
+*.swo

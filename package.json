@@ -1,0 +1,39 @@
+{
+	"name": "pi-session-tps",
+	"version": "0.1.0",
+	"description": "Pi coding agent 扩展：在 TUI 状态栏同时显示当轮与会话加权 tokens/s（含估算标记 ~ 与已测覆盖率）。",
+	"type": "module",
+	"license": "MIT",
+	"main": "./index.ts",
+	"keywords": [
+		"pi-package",
+		"pi",
+		"pi-extension",
+		"tokens-per-second",
+		"tps"
+	],
+	"pi": {
+		"extensions": [
+			"./index.ts"
+		]
+	},
+	"engines": {
+		"node": ">=22.19"
+	},
+	"files": [
+		"index.ts",
+		"src/",
+		"README.md",
+		"LICENSE",
+		"THIRD_PARTY_NOTICES.md"
+	],
+	"scripts": {
+		"test": "node --test",
+		"typecheck": "tsc --noEmit -p tsconfig.json",
+		"check:loader": "node scripts/check-loader.mts"
+	},
+	"devDependencies": {
+		"@types/node": "^24.10.1",
+		"typescript": "^5.9.3"
+	}
+}

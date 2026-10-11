@@ -1,0 +1,35 @@
+// Pi Session TPS 统计内核公共导出（适配层唯一入口；只能消费，不能修改内核）。
+export type {
+  CalibrateSummary,
+  Coverage,
+  DeltaParts,
+  FinalSegmentRecord,
+  RestoreInput,
+  RestoreSummary,
+  RestoredRecord,
+  RoundId,
+  RoundStats,
+  SegmentEndInput,
+  SegmentId,
+  SegmentMeasurement,
+  SegmentOutcome,
+  SessionStats,
+  SettleSegmentInput,
+  StatsQuery,
+  TokenSource,
+  TpsStats,
+} from './types.ts';
+export {
+  CJK_CHARS_PER_TOKEN,
+  PLAIN_CHARS_PER_TOKEN,
+  appendChars,
+  closePendingSurrogate,
+  countChars,
+  createCharAccumulator,
+  estimateTokens,
+  estimateTokensFromCounts,
+  isCjkCodePoint,
+  type CharAccumulator,
+  type CharClassCounts,
+} from './estimate.ts';
+export { SessionTpsKernel, computeTokensPerSecond } from './kernel.ts';
